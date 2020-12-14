@@ -31,6 +31,9 @@ exec --no-startup-id nm-applet
 set $mod Mod1
 set $sup Mod4
 
+# background image
+
+
 # Lock screen
 bindsym $sup+l exec i3lock
 
@@ -40,6 +43,12 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -76,10 +85,10 @@ bindsym Mod1+$up focus up
 bindsym Mod1+$right focus right
 
 # alternatively, you can use the cursor keys:
-bindsym Mod1+Left focus left
-bindsym Mod1+Down focus down
-bindsym Mod1+Up focus up
-bindsym Mod1+Right focus right
+#bindsym Mod1+Left focus left
+#bindsym Mod1+Down focus down
+#bindsym Mod1+Up focus up
+#bindsym Mod1+Right focus right
 
 # move focused window
 bindsym Mod1+Shift+$left move left
@@ -152,8 +161,8 @@ bindsym Mod4+9 workspace number $ws9
 bindsym Mod4+0 workspace number $ws10
 bindsym Mod4+$right workspace next
 bindsym Mod4+Right workspace next
-bindsym Mod4+$left workspace previous
-bindsym Mod4+Left workspace previous
+bindsym Mod4+$left workspace prev
+bindsym Mod4+Left workspace prev
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace number $ws1
@@ -168,8 +177,8 @@ bindsym Mod4+Shift+9 move container to workspace number $ws9
 bindsym Mod4+Shift+0 move container to workspace number $ws10
 bindsym Mod4+Shift+$right move container to workspace next
 bindsym Mod4+Shift+Right move container to workspace next
-bindsym Mod4+Shift+$left move container to workspace previous
-bindsym Mod4+Shift+Left move container to workspace previous
+bindsym Mod4+Shift+$left move container to workspace prev
+bindsym Mod4+Shift+Left move container to workspace prev
 
 # reload the configuration file
 bindsym $sup+Shift+c reload
