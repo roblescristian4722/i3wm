@@ -65,7 +65,7 @@ floating_modifier Mod1
 bindsym Mod1+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym Mod1+w kill
+bindsym Mod1+q kill
 bindsym Mod1+F4 kill
 
 # start dmenu (a program launcher)
