@@ -239,6 +239,6 @@ bar {
     position top
     status_command /usr/bin/bumblebee-status \
         -m git cpu memory nic brightness pasink playerctl bluetooth battery-upower datetime \
-        -p datetime.format="%A %e/%m/%Y %H:%M" pasink.showbars=1 \
+        -p datetime.format="%A %e/%m/%Y %H:%M" \
         -t dracula-powerline
 }
