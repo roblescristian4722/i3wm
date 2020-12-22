@@ -92,7 +92,7 @@ bindsym Mod1+q kill
 bindsym Mod1+F4 kill
 
 # FZF
-bindsym F2 exec --no-startup-id i3-sensible-terminal -e "i3-dmenu-desktop --dmenu=fzf" -t "fzf"
+bindsym Control+space exec --no-startup-id i3-sensible-terminal -e "i3-dmenu-desktop --dmenu=fzf" -t "fzf"
 bindsym $sup+d exec --no-startup-id i3-sensible-terminal -e "i3-dmenu-desktop --dmenu=fzf" -t "fzf"  
 # floating dmenu
 for_window [title="fzf"] floating enable
