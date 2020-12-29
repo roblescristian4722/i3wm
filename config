@@ -1,5 +1,14 @@
 # i3 config file (v4)
 
+# set layout
+exec setxkbmap -layout latam
+
+# enable touchpad tap
+exec xinput set-prop 12 310 1
+
+# Enable natural scrolling
+exec xinput set-prop 12 318 1
+
 # picom on startup
 exec --no-startup-id picom -b
 
@@ -8,6 +17,12 @@ exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
 # global font
 font pango:FontAwesome 9
+
+# spectacle fullscreen background
+bindsym Control+Print exec spectacle -c -b -f
+
+# spectacle rectangle background
+bindsym Control+Shift+Print exec spectacle -c -b -r
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -230,7 +245,7 @@ bar {
     font pango:FontAwesome 9
     position top
     status_command bumblebee-status \
-        -m git arch-update progress cpu memory nvidiagpu nic playerctl layout pasink bluetooth datetime \
+        -m git arch-update progress cpu memory nvidiagpu nic playerctl pasink bluetooth battery datetime \
         -p datetime.format="%A %e/%m/%Y %H:%M" \
         -t dracula-powerline
 }
