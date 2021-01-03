@@ -1,19 +1,13 @@
 # i3 config file (v4)
 
-# MATE
-exec --no-startup-id exec mate-settings-daemon
-exec --no-startup-id exec mate-screensaver
-exec --no-startup-id exec mate-power-manager
-exec --no-startup-id exec nm-applet
-
 # set layout
 exec setxkbmap -layout latam
 
 # enable touchpad tap
-exec xinput set-prop 12 310 1
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # Enable natural scrolling
-exec xinput set-prop 12 318 1
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 
 # picom on startup
 exec --no-startup-id picom -b
@@ -36,7 +30,7 @@ exec --no-startup-id nm-applet
 
 # startup
 # background image
-exec --no-startup-id feh --randomize --bg-scale --no-fehbg /mnt/HDD/Wallpapers/93239.jpg 
+exec --no-startup-id feh --randomize --bg-scale --no-fehbg /mnt/HDD/Wallpapers/blade.runner-1920-874022.jpg
 for_window [class=".*"] border pixel 0
 #hide_edge_borders both
 
@@ -50,14 +44,14 @@ bindsym $mod+minus gaps inner current minus 5
 bindsym $mod+Shift+plus gaps outer current plus 5
 bindsym $mod+Shift+minus gaps outer current minus 5
 
-# dolphin
-bindsym $sup+e exec dolphin
+# nautilus (file manager)
+bindsym $sup+e exec nautilus
 
 # mouse warping
 focus_follows_mouse no
 
 # Lock screen
-bindsym $sup+l exec i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_lock.png
+bindsym $sup+l exec i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_wallpaper_1.png
 #exec xautolock -time 1 -locker "i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_lock.png" -notify 1 -notifier "xset dpms force off" &
 #exec xautolock -time 2 -locker "systemctl suspend" &
 
