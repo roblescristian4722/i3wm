@@ -18,6 +18,9 @@ exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 # global font
 font pango:FontAwesome 9
 
+# spectacle
+bindsym Print exec spectacle
+
 # spectacle fullscreen background
 bindsym Control+Print exec spectacle -c -b -f
 
