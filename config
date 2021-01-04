@@ -33,7 +33,7 @@ exec --no-startup-id nm-applet
 
 # startup
 # background image
-exec --no-startup-id feh --randomize --bg-scale --no-fehbg /mnt/HDD/Wallpapers/blade.runner-1920-874022.jpg
+exec --no-startup-id feh --randomize --bg-scale --no-fehbg /mnt/HDD/Wallpapers/93239.jpg
 for_window [class=".*"] border pixel 0
 #hide_edge_borders both
 
@@ -53,8 +53,11 @@ bindsym $sup+e exec nautilus
 # mouse warping
 focus_follows_mouse no
 
+# shutdown
+bindsym Control+Shift+Delete exec shutdown -h now
+
 # Lock screen
-bindsym $sup+l exec i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_wallpaper_1.png
+bindsym $sup+l exec i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_lock.png
 #exec xautolock -time 1 -locker "i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_lock.png" -notify 1 -notifier "xset dpms force off" &
 #exec xautolock -time 2 -locker "systemctl suspend" &
 
@@ -242,7 +245,7 @@ bar {
     font pango:FontAwesome 9
     position top
     status_command bumblebee-status \
-        -m git arch-update progress cpu memory nvidiagpu nic playerctl pasink bluetooth battery datetime \
+        -m git arch-update progress cpu memory nvidiagpu nic playerctl pasink bluetooth datetime \
         -p datetime.format="%A %e/%m/%Y %H:%M" \
         -t dracula-powerline
 }
