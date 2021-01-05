@@ -63,7 +63,7 @@ bindsym $sup+l exec i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_lock.png
 
 exec s on
 exec xset s 900 1800 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -t -i /mnt/HDD/Wallpapers/blade_runner_lock.png --nofork
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
