@@ -112,6 +112,9 @@ bindsym Mod1+$down focus down
 bindsym Mod1+$up focus up
 bindsym Mod1+$right focus right
 
+# shutdown system
+bindsym Control+Shift+Delete exec shutdown -h now
+
 # alternatively, you can use the cursor keys:
 #bindsym Mod1+Left focus left
 #bindsym Mod1+Down focus down
