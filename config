@@ -25,7 +25,7 @@ bindsym Print exec spectacle
 bindsym Control+Print exec spectacle -c -b -f
 
 # spectacle rectangle background
-bindsym Control+Shift+Print exec spectacle -c -b -r
+bindsym Shift+Print exec spectacle -c -b -r
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
